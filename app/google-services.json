@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1037738929508",
+    "project_id": "fir-rt-nate",
+    "storage_bucket": "fir-rt-nate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037738929508:android:028aa968ee03c6a9901e71",
+        "android_client_info": {
+          "package_name": "com.example.firebase_rt_nate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1037738929508-h3moov7p0692ujcbkt0k6j6phnlus3mv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx3MfEoiM6ZE6hMxASWiOb5l44l58zqxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1037738929508-h3moov7p0692ujcbkt0k6j6phnlus3mv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
