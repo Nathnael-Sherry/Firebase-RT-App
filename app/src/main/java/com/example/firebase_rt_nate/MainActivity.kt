@@ -1,5 +1,6 @@
 package com.example.firebase_rt_nate
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
 
         var database = FirebaseDatabase.getInstance()
-        var databaseRef = database.getReference("cars")
+
 
 
 
@@ -40,6 +41,8 @@ class MainActivity : AppCompatActivity() {
 
         //viewing uloaded data
         car_view.setOnClickListener {
+            var view_cars = Intent(this, ViewCars::class.java)
+            startActivity(view_cars)
 
         }
 
@@ -52,12 +55,16 @@ class MainActivity : AppCompatActivity() {
             var carprice = carprice_edt.text.toString().trim()
             var carmodel = carmodel_edt.text.toString().trim()
 
+            var id = System.currentTimeMillis().toString()
+
+            var databaseRef = database.getReference("cars/"+id)
+
             if (carmake.isEmpty() || carprice.isEmpty() || carmodel.isEmpty()){
                 Toast.makeText(this, "cannot submit empty fields", Toast.LENGTH_SHORT).show()
             }else{
 
                 //try to upload data to firebase
-                var usercar = car(carmake, carmodel, carprice)
+                var usercar = Cars(carmake, carmodel, carprice, id)
 
                 //creata a reference to the firebase cloud
                 var ref = FirebaseDatabase.getInstance().getReference().child("cars")
